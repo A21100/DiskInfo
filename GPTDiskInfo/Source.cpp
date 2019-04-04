@@ -5,10 +5,8 @@
 using namespace std;
 
 
-
 int main() {
 	setlocale(0, "rus");
-	cout << "Lab1" << endl;
 
 	int n;
 	char dd[4];
@@ -22,14 +20,13 @@ int main() {
 		if (n == 1)
 		{
 			dd[0] = char(65 + i); dd[1] = ':'; dd[2] = '\\'; dd[3] = 0;
-			cout << "Available disk drives : " << dd << endl;
-
+			cout << "Логический лиск: : " << dd << endl;
 
 			d = GetDriveType(dd);
-			if (d == DRIVE_UNKNOWN) cout << " UNKNOWN" << endl;
+			if (d == DRIVE_UNKNOWN) cout << " Тип - неопределен" << endl;
 			if (d == DRIVE_NO_ROOT_DIR) cout << " DRIVE NO ROOT DIR" << endl;
-			if (d == DRIVE_REMOVABLE) cout << " REMOVABLE" << endl;
-			if (d == DRIVE_FIXED) cout << " Fixed disk" << endl;
+			if (d == DRIVE_REMOVABLE) cout << " Тип - внешний" << endl;
+			if (d == DRIVE_FIXED) cout << " Тип - фиксированный" << endl;
 			if (d == DRIVE_REMOTE) cout << " REMOTE" << endl;
 			if (d == DRIVE_CDROM) cout << " CDROM" << endl;
 			if (d == DRIVE_RAMDISK) cout << " RAMDISK" << endl;
@@ -52,8 +49,7 @@ int main() {
 					drive_fat,
 					sizeof(drive_fat)
 				);
-
-				cout << drive_sn << endl;
+				cout << "Серийный номер тома: " << drive_sn << endl;
 		
 			}
 		}
